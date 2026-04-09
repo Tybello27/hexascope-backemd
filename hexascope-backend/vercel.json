@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "api/detect.py",
@@ -8,7 +9,12 @@
   "routes": [
     {
       "src": "/api/detect",
-      "dest": "api/detect.py"
+      "dest": "api/detect.py",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     }
   ]
 }
